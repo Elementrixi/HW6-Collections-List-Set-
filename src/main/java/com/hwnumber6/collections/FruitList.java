@@ -11,8 +11,11 @@ public class FruitList {
         fruits.add("orange");
         fruits.add("plump");
         System.out.println("\n Current fruits : " + fruits);
-        int replace = fruits.indexOf("orange");
-        fruits.set(replace, "grapefruit");
-        System.out.println(" Really you want to take orange ? Better take grapefruit " + fruits);
+        if (fruits.contains("orange")) {
+            fruits.set(fruits.indexOf("orange"), "grapefruit");
+            System.out.println(" Really you want to take orange ? Better take grapefruit " + fruits.toString());
+        } else {
+            System.out.println("We have no oranges \uD83D\uDE1E");
+        }
     }
 }
